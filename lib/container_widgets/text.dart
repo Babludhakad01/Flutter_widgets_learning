@@ -65,7 +65,7 @@ class _MyHomePageState extends State<TextPage> {
               padding: EdgeInsets.all(16),
               child: Text(
                 "This is a Simple Card - Bablu dhakad",
-                style: TextStyle(fontSize: 18, color: Colors.black),
+                style: TextStyle(fontSize: 18, color: Colors.black, fontWeight:FontWeight.w700),
               ),
             ),
           ),
