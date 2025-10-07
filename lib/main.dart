@@ -1,4 +1,8 @@
 
+import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/BottomNavigationBar/bottomNavigation.dart';
+import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/BottomNavigationBar/customNavigation.dart';
+import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/Drawer/drawer.dart';
+import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/floatingAction.dart';
 import 'package:demo_project/ListView_GridView_Wrap_Widget/GridView/gridViewCount.dart';
 import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/listView.dart';
 import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/listViewBuilder.dart';
@@ -24,49 +28,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Signup Page",
+      title: "Flutter Learning",
       debugShowCheckedModeBanner:  false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple ),
       ),
-      // home: const SignupPage(title: "Signup Page"),
-      // home: const ButtonPractice(title: "Button Practice"),
-      // home: const ListViewPage(title: "List View Practice"),
-      // home: const ListViewSeparted(title: "List View Practice"),
-      // home: const UserListPage(title: "List View Practice"),
-      // home: const PrototypeExample(title: "Scroll Controller or ProtoTypeItem"),
-      // home: const GridViewPage(title: "Grid view Page "),
-      // home: const KeepAliveExample(title: "Grid view Page "),
-      // home: const GridViewPageCount(title: "Grid view Count Page "),
-      home: const WrapWidgetExample(title: "Grid view Count Page "),
+      /*
+      home: const SignupPage(title: "Signup Page"),
+      home: const ButtonPractice(title: "Button Practice"),
+      home: const ListViewPage(title: "List View Practice"),
+      home: const ListViewSeparted(title: "List View Practice"),
+      home: const UserListPage(title: "List View Practice"),
+      home: const PrototypeExample(title: "Scroll Controller or ProtoTypeItem"),
+      home: const GridViewPage(title: "Grid view Page "),
+      home: const KeepAliveExample(title: "Grid view Page "),
+      home: const GridViewPageCount(title: "Grid view Count Page "),
+     home: const WrapWidgetExample(title: "Grid view Count Page "),
+
+       */
+      // home: const DrawerExample(title: "Drawer Examples "),
+      //home: const BottomNavbarExample(title: "Bottom Navbar Examples "),
+      home: const FloatingActionBtnExample(title: "Floating Action Button Examples "),
 
     );
   }
 }
 
- // Default code StatefulWidget
-// class MyHomePage extends StatefulWidget {
-//
-//   const MyHomePage({super.key, required this.title});
-//
-//   final String title;
-//
-//   @override
-//   State<MyHomePage> createState() => _MyHomePageState();
-//
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-//         title: Text(widget.title),
-//       ),
-//       body: Center(),
-//     );
-//   }
-//
-// }
