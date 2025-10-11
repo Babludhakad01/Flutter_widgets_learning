@@ -17,67 +17,120 @@ class _InkWellExample extends State<InkWellExample> {
         title: Text(widget.title),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body:
-
-      // Center(
-      //   child: InkWell(
-      //     borderRadius: BorderRadius.circular(16), // 🔹 Ripple bhi rounded hoga
-      //     onTap: () {
-      //       print("Card tapped!");
-      //     },
-      //     child: Ink(
-      //       // 🔹 Ripple dikhane ke liye Ink widget use karo (important)
-      //       decoration: BoxDecoration(
-      //         color: Colors.blue.shade100,
-      //         borderRadius: BorderRadius.circular(16),
-      //       ),
-      //       child: Container(
-      //         width: 200,
-      //         height: 120,
-      //         padding: EdgeInsets.all(16),
-      //         child: Column(
-      //           crossAxisAlignment: CrossAxisAlignment.start,
-      //           children: [
-      //             Text(
-      //               "Flutter Course",
-      //               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-      //             ),
-      //             SizedBox(height: 8),
-      //             Text(
-      //               "Tap to view details",
-      //               style: TextStyle(color: Colors.black54),
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
-
-      InkWell(
-        // splashColor: Colors.red,
-       // highlightColor: Colors.yellow.withValues(alpha: 0.3),
-        radius: 60,
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
-
-       // customBorder: CircleBorder(), // iska example
-        onTap: (){
-          print("On tap clicked");
-        },
-
-        child: Center(
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(20),
+      body: Padding(
+        padding: EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // On Tap Example
+            InkWell(
+              onTap: () {
+                print("On  tap Clicked");
+              },
+              child: Container(
+                width: 500,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red, width: 1),
+                ),
+                child: Center(
+                  child: Text(
+                    "On Tap Inkwell",
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
             ),
-            child: Text(
-              "Click",
-              style: TextStyle(fontSize: 20, color: Colors.white),
+            SizedBox(height: 10),
+            //Double Tap Example
+            InkWell(
+              onDoubleTap: () {
+                print("On double tap Clicked");
+              },
+              child: Container(
+                width: 500,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: Colors.purple,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red, width: 1),
+                ),
+                child: Center(
+                  child: Text(
+                    "On Tap Inkwell",
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
             ),
-          ),
+            SizedBox(height: 10),
+
+            // On LongPress
+            InkWell(
+              onLongPress: () {
+                print("On long press Clicked");
+              },
+              child: Container(
+                width: 500,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red, width: 1),
+                ),
+                child: Center(
+                  child: Text(
+                    "On Tap Inkwell",
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            // custom Splash + Rounded inkwell
+            InkWell(
+              splashColor: Colors.red,
+
+              borderRadius: BorderRadius.circular(12),
+              onTap: (){
+                print("inkwell splash clicked");
+              },
+              child: Container(
+                width: 500,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red, width: 1),
+                ),
+                child: Center(
+                  child: Text(
+                    "custom Splash +Rounded inkwell",
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
