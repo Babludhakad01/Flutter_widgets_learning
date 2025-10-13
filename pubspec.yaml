@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   http: ^1.5.0
+  fluttertoast: ^9.0.0
+  oktoast: ^3.4.0
 
 dev_dependencies:
   flutter_test:

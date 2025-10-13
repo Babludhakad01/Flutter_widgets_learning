@@ -10,7 +10,7 @@ class TimeStampExample extends StatefulWidget {
 }
 
 class _TimeStampExample extends State<TimeStampExample> {
-  late Stream<String> _timeStream;
+  late Stream<String> _timeStream;  // initialization for later to use late keyword
 
   @override
   void initState() {

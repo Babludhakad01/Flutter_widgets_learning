@@ -1,47 +1,38 @@
-
-import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/BottomNavigationBar/bottomNavigation.dart';
-import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/BottomNavigationBar/customNavigation.dart';
-import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/Drawer/drawer.dart';
-import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/Drawer/userAccountDrawerHeader.dart';
-import 'package:demo_project/Drawer_BottomNavBar_Floating_Widgets/floatingAction.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/GridView/gridViewCount.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/listView.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/listViewBuilder.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/listViewSepareted.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/protoType.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/ListView/scrollController.dart';
-import 'package:demo_project/ListView_GridView_Wrap_Widget/WrapWidget/wrapWidgetExample.dart';
-import 'package:demo_project/Practice/inkWell.dart';
-import 'package:demo_project/Practice/signupPage.dart';
-import 'package:demo_project/Row_Column/box.dart';
-import 'package:demo_project/Row_Column/rowExample.dart';
-import 'package:demo_project/ScrollBar/listViewScroll.dart';
-import 'package:demo_project/ScrollBar/scrollbar.dart';
-import 'package:demo_project/images/assetsImages.dart';
-import 'package:demo_project/images/flileImage.dart';
-import 'package:demo_project/widgets/myStatefulExample.dart';
-import 'package:demo_project/widgets/statelessExamples.dart';
+import 'package:demo_project/PageView_NavigationBar_TabBar/navigation.dart';
+import 'package:demo_project/PageView_NavigationBar_TabBar/pageViewExample.dart';
+import 'package:demo_project/PageView_NavigationBar_TabBar/pageViewExample2.dart';
+import 'package:demo_project/PageView_NavigationBar_TabBar/tabNavigation.dart';
+import 'package:demo_project/RefreshIndicator_Snackbar/refreshIndicatorExample.dart';
+import 'package:demo_project/RefreshIndicator_Snackbar/snackbarExample.dart';
+import 'package:demo_project/RefreshIndicator_Snackbar/toastExamplePage.dart';
+import 'package:demo_project/StreamBuilder/timeStamp.dart';
+import 'package:demo_project/buttons/popupBtn.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:oktoast/oktoast.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(OKToast(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Learning",
-      debugShowCheckedModeBanner:  false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) =>
+      //       const PopupBtnExample(title: "PopupMenu button  Example"),
+      //   '/about': (context) =>
+      //       const TimeStampExample(title: "Stream Builder Example"),
+      // },
+
       /*
       home: const SignupPage(title: "Signup Page"),
       home: const ButtonPractice(title: "Button Practice"),
@@ -64,9 +55,16 @@ class MyApp extends StatelessWidget {
       // home: const ImagesExample(title: "Images Page  "),
       // home: const FileImageExample(title: "File Image  Page  "),
       // home: const MyStatelessPage(),
-      home: const MyStatefulExample(),
-
+      // home: const MyStatefulExample(),
+      // home:  const MyStreamBuilderPage(title: "Stream Builder Example"),
+      // home:  const TimeStampExample(title: "Stream Builder Example"),
+      
+      // home: const RefreshIndicatorExample(title: "Refresh Indicator Example"),
+      // home: const SnackbarExample(title: "Snackbar  Example"),
+     // home: const ToastPage(title: "Toast Page Example"),
+     //  home: const PageViewExample(title: "PageView Widget Example"),
+     //  home: const PageViewExample2(title: "PageView 2 Example"),
+      home: const TabNavigationExample(title: "PageView 2 Example"),
     );
   }
 }
-
