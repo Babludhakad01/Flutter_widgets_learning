@@ -1,3 +1,4 @@
+import 'package:demo_project/DatePicker_TimePicker_ImagePicker/datePickerExample.dart';
 import 'package:demo_project/PageView_NavigationBar_TabBar/navigation.dart';
 import 'package:demo_project/PageView_NavigationBar_TabBar/pageViewExample.dart';
 import 'package:demo_project/PageView_NavigationBar_TabBar/pageViewExample2.dart';
@@ -6,6 +7,10 @@ import 'package:demo_project/RefreshIndicator_Snackbar/refreshIndicatorExample.d
 import 'package:demo_project/RefreshIndicator_Snackbar/snackbarExample.dart';
 import 'package:demo_project/RefreshIndicator_Snackbar/toastExamplePage.dart';
 import 'package:demo_project/StreamBuilder/timeStamp.dart';
+import 'package:demo_project/TextTile_bottomSheet_alretbar/alertBarExample.dart';
+import 'package:demo_project/TextTile_bottomSheet_alretbar/bottomSheetExample.dart';
+import 'package:demo_project/TextTile_bottomSheet_alretbar/persistentBottomSheetExample.dart';
+import 'package:demo_project/TextTile_bottomSheet_alretbar/textTileExample.dart';
 import 'package:demo_project/buttons/popupBtn.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
@@ -25,6 +30,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+
+      // home: const AlertBarExample(title: "Alert Bar"),
+      home: const DatePickerExample(title: "Date Picker"),
+
       // initialRoute: '/',
       // routes: {
       //   '/': (context) =>
@@ -64,7 +73,10 @@ class MyApp extends StatelessWidget {
      // home: const ToastPage(title: "Toast Page Example"),
      //  home: const PageViewExample(title: "PageView Widget Example"),
      //  home: const PageViewExample2(title: "PageView 2 Example"),
-      home: const TabNavigationExample(title: "PageView 2 Example"),
+     //  home: const TabNavigationExample(title: "PageView 2 Example"),
+     // home: const TextTileExample(title: "Text Tile Example"),
+     //  home: const BottomSheetPage(title: "Bottom Sheet Example"),
+     //  home: const PersistentBottomExample(title: "Persistent Bottom Sheet"),
     );
   }
 }

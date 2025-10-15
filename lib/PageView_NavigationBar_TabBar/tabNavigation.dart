@@ -19,9 +19,18 @@ class _TabNavigationExample extends State<TabNavigationExample> {
           title: Text(widget.title),
           backgroundColor: Colors.orange,
           bottom: TabBar(
+            // isScrollable: true,
+            padding: EdgeInsets.all(12),
+            //indicatorColor: Colors.teal, // indicator color of selected tab
+            automaticIndicatorColorAdjustment: true,
+            indicatorSize: TabBarIndicatorSize.label,
+            dividerColor: Colors.grey,
+            unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+
             tabs: [
               Tab(icon: Icon(Icons.home), text: "Home"),
               Tab(icon: Icon(Icons.search), text: "search"),
+
               Tab(icon: Icon(Icons.person), text: "profile"),
             ],
           ),
