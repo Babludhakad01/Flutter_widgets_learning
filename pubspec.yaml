@@ -14,6 +14,8 @@ dependencies:
   http: ^1.5.0
   fluttertoast: ^9.0.0
   oktoast: ^3.4.0
+  image_picker: ^1.2.0
+  flutter_switch: ^0.3.2
 
 dev_dependencies:
   flutter_test:
