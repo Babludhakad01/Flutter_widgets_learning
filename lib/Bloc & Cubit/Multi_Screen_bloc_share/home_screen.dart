@@ -60,14 +60,36 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // new Product add
-            cartBloc.add(
-              AddItemEvent("Product ${cartBloc.state.items.length + 1}"),
-            );
-          },
-          child: const Text("Add Item Cart"),
+        child: Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // new Product add
+                cartBloc.add(
+                  AddItemEvent("Product ${cartBloc.state.items.length + 1}"),
+                );
+              },
+              child: const Text("Add Item Cart"),
+            ),
+
+            SizedBox(width: 10),
+
+            ElevatedButton(
+              onPressed: () {
+                // Remove  Product
+
+                final index = cartBloc.state.items.length - 1;
+
+                if (index >= 0) {
+                  cartBloc.add(RemoveItemEvent(index));
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text("Item Removed")));
+                }
+              },
+              child: const Text("Remove Item Cart"),
+            ),
+          ],
         ),
       ),
     );
